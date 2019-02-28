@@ -8,13 +8,11 @@ public:
 	Fireball();
 	~Fireball();
 
-	sf::Texture textureNorth; // the texture for fireball facing north
-	sf::Texture textureSouth; // the texture for fireball facing south
-	sf::Texture textureEast; // the texture for fireball facing east
-	sf::Texture textureWest; // the texture for fireball facing west
+	sf::Texture textureFireball; // the texture for firebal
 	// Note instead of using the 4 texture images above you might choose to use one image and rotate it.
 
-	sf::Sprite body; // sprite used to represent fireball
+	sf::Sprite fireball; // sprite used to represent fireball
+	sf::Sprite fireballTwo;
 
 	int speed;  // the speed of the fireball
 	int direction; // the direction of the fireball
@@ -27,6 +25,30 @@ public:
 	void hit(); // the fireball has hit something
 	void fired(); // the fireball is fired
 	void move(); // the fireball moves 
+	void loadImages();
+	sf::RectangleShape shape;
+	sf::Vector2f velocity;
 
+	void setUpShapes();
+	//void move();
+
+	//***********************************
+	
+	void moveUp();
+
+	void moveDown();
+
+	void moveRight();
+	void eastGuardFire();
+	void moveLeft();
+	void stop();
+
+	void southGuardFire();
+
+	int fireballWait = 0;
+	bool readyFire = false;
+
+	void moveGuard();
+	
 };
 

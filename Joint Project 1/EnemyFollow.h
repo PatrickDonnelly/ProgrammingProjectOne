@@ -1,16 +1,17 @@
 #pragma once
 
 #include "SFML/Graphics.hpp" 
-#include "Player.h"
+
+
 
 class EnemyFollow
 {
+
 public:
 	EnemyFollow();
 	~EnemyFollow();
 
-	Player player;
-
+	
 	sf::Texture textureNorth; // the texture for enemy facing north
 	sf::Texture textureSouth; // the texture for enemy facing south
 	sf::Texture textureEast; // the texture for enemy facing east
@@ -19,11 +20,11 @@ public:
 
 	sf::Sprite body; // sprite used to represent enemy
 
-	int speed;  // the speed of the enemy
+	//int speed;  // the speed of the enemy
 	int timesHit; // the number of times hit
 	int direction; // the direction the enemy is facing
 	bool isAlive;  //To see if the enemy is still alive 
-
+	int health = 30;
 	// Functions
 	//EnemyFollow(); //constructor
 	void setUpEnemy();
@@ -32,7 +33,11 @@ public:
 	void hit(); // enemy is hit by a fireball
 	void dies();// enemy dies
 	void reSpawn(); // the enemy respawns somewhere randomly on the screen
-	void move(); // the enemy follows the player but stay within the boundary of the screen.
-
+	void move(sf::Vector2f t_PlayerPosition); // the enemy follows the player but stay within the boundary of the screen.
+	void moveTwo(sf::Vector2f t_PlayerPosition); // the enemy follows the player but stay within the boundary of the screen.
+	void loadImages();
+	
+	int speed = 1;
+	int speedTwo = 1;
 };
 

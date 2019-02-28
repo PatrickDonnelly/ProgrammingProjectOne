@@ -126,7 +126,10 @@
     <ClCompile Include="EnemyLeftAndRight.cpp" />
     <ClCompile Include="Fireball.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="MyVector2.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnemyFollow.h" />
@@ -134,7 +137,10 @@
     <ClInclude Include="Fireball.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Guard.h" />
+    <ClInclude Include="MyVector2.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

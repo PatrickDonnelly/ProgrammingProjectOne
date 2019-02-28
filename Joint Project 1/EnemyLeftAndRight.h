@@ -7,15 +7,17 @@ class EnemyLeftAndRight
 public:
 	EnemyLeftAndRight();
 	~EnemyLeftAndRight();
-
+	void loadImages();
 	sf::Texture textureNorth; // the texture for enemy facing north
 	sf::Texture textureSouth; // the texture for enemy facing south
 	sf::Texture textureEast; // the texture for enemy facing east
 	sf::Texture textureWest; // the texture for enemy facing west
+	sf::Texture texturePlatform;
 	// Note instead of using the 4 texture images above you might choose to use one image and rotate it.
+	
+	int health = 50;
 
 	sf::Sprite body; // sprite used to represent enemy
-
 	int speed;  // the speed of the enemy
 	int direction; // the direction the enemy is facing
 	bool isAlive;  //To see if the enemy is still alive 
@@ -29,5 +31,7 @@ public:
 	void reSpawn(); // the enemy respawns to a fixed position on the screen
 	void move(); // the enemy moves left to right on the screen but stay within the boundary of the screen.
 	void setUpEnemy();
+	int speedLeft = 0;
+	int speedRight = 0;
 };
 
